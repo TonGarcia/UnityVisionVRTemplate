@@ -40,7 +40,17 @@ Unity GitHub Repo Template
       2. check: "Instantiate in Editor Only"
       3. XR Device Simulator must be a prefab pre-selected: "XR Device Simulator"
       4. **do not** check old layers
-   4. 
+7. (on Unity) Building
+   1. File > Build Settings
+      1. Build > Clean Build = export it into "Builds/VisionOS" folder
+      2. Open generated XCode file
+         1. on top select vision simulator as target: "Unity-VisionOS > Apple Vision Pro"
+         2. set app category
+         3. set Display Name (it should be filled by Unity settings)
+         4. Run the project to get simulator running and activated to be available for Unity
+      3. (Unity Build Settings) To run on Emulator click: "Build and Run"
+
+PS.: on Unity 2022.3.11f1 and XCode v15.1 BETA it is not filling version and DisplayName correctly, but for simulator it is enough. The name on Unity Player Settings is displayed on the app name on VisionOS Simulator
 
 
 # Errors HotFix

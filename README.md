@@ -4,6 +4,45 @@ Unity GitHub Repo Template
 *Remember to copy and paste `.gitattributes` & `.gitignore` into it project sub folder.    
 **Remember to protect it new repository branchs
 
+# XR Setup
+
+1. Install XCode Beta that includes visionOS (https://developer.apple.com/download/applications/)
+2. Download XCode simulators, including visionOS
+3. Download compatible Unity version (2022.3.5f1 or newer)
+4. (on Unity) File > Build Settings > Switch platform to visionOS
+   1. check "Development Build"
+   2. for "Run in XCode" select the location for the XCode Beta which supports visionOS
+   3. for "Run in XCode as" select "Debug"
+   4. click on "Player Settings"
+      1. setup a Bundler Identifier
+      2. change the version to your version strategy pattern
+      3. API compatibility level: ".NET Standard 2.1"
+      4. Target SDK: "Simulator SDK"
+      5. Active input handling: "Input System Package (new)"
+5. (on Unity) Window > Package Manager
+   1. for the filter "Package" select: "Unity Registry"
+   2. search by: "xr"
+   3. install all the components:
+      1. Apple ARKit XR Plugin
+      2. AR Foundation
+      3. OpenXR Plugin
+      4. XR Hands
+      5. XR Interaction Toolkit
+      6. XR Plugin Management
+6. (on Unity) Edit > Project Settings > XR Plug-in Management
+   1. Apple ARKit
+      1. Requirement: required
+      2. Face Tracking: checked (check it)
+   2. OpenXR:
+      1. Render Mode: Single Pass Instanced
+   3. XR Interaction Toolkit
+      1. check: "Use XR Device Simulator in scenes"
+      2. check: "Instantiate in Editor Only"
+      3. XR Device Simulator must be a prefab pre-selected: "XR Device Simulator"
+      4. **do not** check old layers
+   4. 
+
+
 # Errors HotFix
 
 ## IF Unity incompatible version

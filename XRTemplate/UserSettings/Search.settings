@@ -8,6 +8,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+	"last_search.310DEAF1" = "vision"
+	"OpenInspectorPreview.310DEAF1" = "0"
+	"currentGroup.310DEAF1" = "all"
 }
 providers = {
 	packages = {
@@ -59,6 +62,8 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"vi"
+	"xr"
 ]
 searchItemFavorites = [
 ]

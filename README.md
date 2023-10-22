@@ -1,8 +1,8 @@
 # UnityTemplate
-Unity GitHub Repo Template
+Unity XR GitHub Repo Template
 
 *Remember to copy and paste `.gitattributes` & `.gitignore` into it project sub folder.    
-**Remember to protect it new repository branchs
+**Remember to protect it new repository branches
 
 # XR Setup
 
@@ -49,9 +49,11 @@ Unity GitHub Repo Template
          3. set Display Name (it should be filled by Unity settings)
          4. Run the project to get simulator running and activated to be available for Unity
       3. (Unity Build Settings) To run on Emulator click: "Build and Run"
+8. Enable PolySpatial runtime: Edit > Project Settings > PolySpatial > Enable PolySpatial Runtime
 
 PS.: on Unity 2022.3.11f1 and XCode v15.1 BETA it is not filling version and DisplayName correctly, but for simulator it is enough. The name on Unity Player Settings is displayed on the app name on VisionOS Simulator
 
+PS.: by default unity create a windowed (AR) VisionOS app, just by adding PolySpatial package you will be able to create exclusive (VR).
 
 ## Fully immersive space
 
@@ -85,10 +87,29 @@ PS.: on Unity 2022.3.11f1 and XCode v15.1 BETA it is not filling version and Dis
       2. water effect
       3. transparency effects
 
+### XR VolumeCameraComponent
+
+1. **Bounded volumes**: looks like a **widget** --> [Unity calls it "**Shared**"](https://docs.unity3d.com/Packages/com.unity.polyspatial.visionos@0.1/manual/PolySpatialMRApps.html)
+   1. In Shared Space (**AR**) = immersive
+   2. Unity dimensions and transforms
+   3. Real world size
+   4. Movable by the user (but not resized)
+2. **Unbounded volumes**: looks like an **app** --> [Unity calls it "**Exclusive**"](https://docs.unity3d.com/Packages/com.unity.polyspatial.visionos@0.1/manual/PolySpatialMRApps.html)
+   1. Displays in a Full Space
+   2. No dimensions (it fills the entire "screen"/scene) = **VR**
+   3. Unity units mapped to real-world units
+   4. One active at a time
+
 ### Controllers Inputs
 
-1. **Controllers**: people will use **Hands** and **Eyes** to interact with the content
-2. Interactions approaches:
+1. Inputs Types:
+   1. Look & Tap = tap is like the same as on a mobile game app
+   2. Hands
+   3. Head pose
+   4. Augmented reality
+   5. Bluetooth (for joystick or keyboard)
+2. **Controllers**: people will use **Hands** and **Eyes** to interact with the content
+3. Interactions approaches:
    1. **XR Interaction Toolkit**: abstract input which adds hand tracking
       1. Features:
          1. high level interaction system
